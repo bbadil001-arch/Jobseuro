@@ -1,3 +1,3 @@
 git add .
-git commit -m "وصف التعديل الذي قمت به"
+git commit -m "add 30m9"
 git push
