@@ -588,7 +588,6 @@ footer{background:var(--ink);color:#C7C2B2;padding:64px 0 28px;margin-top:40px;}
   .support-panel{inset-inline-end:16px; bottom:88px; width:calc(100vw - 32px);}
   .support-fab{inset-inline-end:16px; bottom:18px;}
 }
-<<<<<<< HEAD
 
 
 /* SEO article tables and source notes */
@@ -600,5 +599,3 @@ footer{background:var(--ink);color:#C7C2B2;padding:64px 0 28px;margin-top:40px;}
 .article-body a{color:var(--teal,#197C83);text-decoration:underline;text-underline-offset:2px;}
 .article-body code{background:#F3F1EA;padding:2px 5px;border-radius:4px;font-size:.9em;}
 @media(max-width:600px){.article-body{padding-left:18px;padding-right:18px}.article-body th,.article-body td{padding:9px 10px;font-size:.88rem;}}
-=======
->>>>>>> de1f87d630660a834398ac81df0983fc5bdf0761

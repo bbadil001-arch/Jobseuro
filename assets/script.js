@@ -49,14 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
       let valid = true;
       const required = form.querySelectorAll('[required]');
       required.forEach(input => {
-<<<<<<< HEAD
         const field = input.closest('.field') || input.closest('.checkline');
         const missing = input.type === 'checkbox' ? !input.checked : !String(input.value || '').trim();
         if (missing) {
-=======
-        const field = input.closest('.field');
-        if (!input.value.trim()) {
->>>>>>> de1f87d630660a834398ac81df0983fc5bdf0761
           valid = false;
           field && field.classList.add('has-error');
         } else {
@@ -105,15 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
 
-<<<<<<< HEAD
       const showError = (message) => {
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalBtnText; }
         alert(message || 'Something went wrong sending your application. Please try again, or email us directly.');
-=======
-      const showError = () => {
-        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalBtnText; }
-        alert('Something went wrong sending your application. Please try again, or email us directly.');
->>>>>>> de1f87d630660a834398ac81df0983fc5bdf0761
       };
 
       const doSubmit = () => {
@@ -142,7 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const fileInput = document.getElementById('cv-file');
       if (fileInput && fileInput.files.length) {
         const file = fileInput.files[0];
-<<<<<<< HEAD
         const maxCvBytes = Number(fileInput.dataset.maxSize || 5242880);
         const isPdf = file.type === 'application/pdf' || /\.pdf$/i.test(file.name);
         if (!isPdf) {
@@ -160,15 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
           doSubmit();
         };
         reader.onerror = () => showError('We could not read the CV file. Please try again or submit without it.');
-=======
-        const reader = new FileReader();
-        reader.onload = () => {
-          payload.cv_filename = file.name;
-          payload.cv_base64 = reader.result; // data URL, includes base64 + mime prefix
-          doSubmit();
-        };
-        reader.onerror = () => doSubmit(); // send without CV rather than block submission
->>>>>>> de1f87d630660a834398ac81df0983fc5bdf0761
         reader.readAsDataURL(file);
       } else {
         doSubmit();
@@ -208,11 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
         articles: 'We have 20+ in-depth articles covering visas, EURES, CVs, language certificates, diploma recognition, cost of living, and country guides (Germany, France, Sweden, Italy and more) — check the Articles page.',
         languages: 'The site is available in English, French, German and Arabic — use the language switcher in the navigation bar.',
       },
-<<<<<<< HEAD
-      links: { apply: 'apply', articles: 'articles', contact: 'contact' },
-=======
       links: { apply: 'apply.html', articles: 'articles.html', contact: 'contact.html' },
->>>>>>> de1f87d630660a834398ac81df0983fc5bdf0761
     },
     fr: {
       title: 'Assistant JobsEuro', subtitle: 'Réponse généralement instantanée',
@@ -235,11 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
         articles: 'Nous avons plus de 20 articles détaillés sur les visas, EURES, le CV, les certificats de langue, la reconnaissance des diplômes, le coût de la vie et des guides par pays — consultez la page Articles.',
         languages: 'Le site est disponible en anglais, français, allemand et arabe — utilisez le sélecteur de langue dans le menu.',
       },
-<<<<<<< HEAD
-      links: { apply: 'apply', articles: 'articles', contact: 'contact' },
-=======
       links: { apply: 'apply.html', articles: 'articles.html', contact: 'contact.html' },
->>>>>>> de1f87d630660a834398ac81df0983fc5bdf0761
     },
     de: {
       title: 'JobsEuro-Assistent', subtitle: 'Antwortet meist sofort',
@@ -262,11 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
         articles: 'Wir haben über 20 ausführliche Artikel zu Visa, EURES, Lebenslauf, Sprachzertifikaten, Anerkennung von Abschlüssen, Lebenshaltungskosten und Länderguides — schau auf der Artikel-Seite vorbei.',
         languages: 'Die Website gibt es auf Englisch, Französisch, Deutsch und Arabisch — nutze den Sprachumschalter im Menü.',
       },
-<<<<<<< HEAD
-      links: { apply: 'apply', articles: 'articles', contact: 'contact' },
-=======
       links: { apply: 'apply.html', articles: 'articles.html', contact: 'contact.html' },
->>>>>>> de1f87d630660a834398ac81df0983fc5bdf0761
     },
     ar: {
       title: 'مساعد JobsEuro', subtitle: 'يرد عادة بشكل فوري',
@@ -289,11 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
         articles: 'لدينا أكثر من 20 مقالة تفصيلية تغطي التأشيرات وEURES والسيرة الذاتية وشهادات اللغة ومعادلة الشهادات وتكلفة المعيشة وأدلة الدول (ألمانيا، فرنسا، السويد، إيطاليا وغيرها) — راجع صفحة المقالات.',
         languages: 'الموقع متوفر بالإنجليزية والفرنسية والألمانية والعربية — استخدم مبدّل اللغة في القائمة العلوية.',
       },
-<<<<<<< HEAD
-      links: { apply: 'apply', articles: 'articles', contact: 'contact' },
-=======
       links: { apply: 'apply.html', articles: 'articles.html', contact: 'contact.html' },
->>>>>>> de1f87d630660a834398ac81df0983fc5bdf0761
     },
   };
 
