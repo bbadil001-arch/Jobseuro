@@ -49,9 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
       let valid = true;
       const required = form.querySelectorAll('[required]');
       required.forEach(input => {
-        const field = input.closest('.field') || input.closest('.checkline');
-        const missing = input.type === 'checkbox' ? !input.checked : !String(input.value || '').trim();
-        if (missing) {
+        const field = input.closest('.field');
+        if (!input.value.trim()) {
           valid = false;
           field && field.classList.add('has-error');
         } else {
@@ -100,9 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
 
-      const showError = (message) => {
+      const showError = () => {
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalBtnText; }
-        alert(message || 'Something went wrong sending your application. Please try again, or email us directly.');
+        alert('Something went wrong sending your application. Please try again, or email us directly.');
       };
 
       const doSubmit = () => {
@@ -131,23 +130,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const fileInput = document.getElementById('cv-file');
       if (fileInput && fileInput.files.length) {
         const file = fileInput.files[0];
-        const maxCvBytes = Number(fileInput.dataset.maxSize || 5242880);
-        const isPdf = file.type === 'application/pdf' || /\.pdf$/i.test(file.name);
-        if (!isPdf) {
-          showError('Please upload your CV as a PDF file.');
-          return;
-        }
-        if (file.size > maxCvBytes) {
-          showError('Your CV must be 5 MB or smaller.');
-          return;
-        }
         const reader = new FileReader();
         reader.onload = () => {
-          payload.cv_filename = file.name.replace(/[^a-zA-Z0-9._-]/g, '_').slice(0, 160);
+          payload.cv_filename = file.name;
           payload.cv_base64 = reader.result; // data URL, includes base64 + mime prefix
           doSubmit();
         };
-        reader.onerror = () => showError('We could not read the CV file. Please try again or submit without it.');
+        reader.onerror = () => doSubmit(); // send without CV rather than block submission
         reader.readAsDataURL(file);
       } else {
         doSubmit();

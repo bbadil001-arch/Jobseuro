@@ -52,21 +52,21 @@
 </header>
 <section>
   <div class="container form-wrap">
-    <form id="apply-form" class="form-card" novalidate autocomplete="off">
+    <form id="apply-form" class="form-card" novalidate>
 
       <div class="form-section">
         <div class="form-section-head"><span class="idx">01</span><h3>البيانات الشخصية</h3></div>
         <div class="form-row">
-          <div class="field"><label for="fullname">الاسم الكامل *</label><input type="text" id="fullname" name="fullname" autocomplete="name" maxlength="120" required><span class="form-error">هذا الحقل مطلوب</span></div>
-          <div class="field"><label for="birthdate">تاريخ الميلاد *</label><input type="date" id="birthdate" name="birthdate" autocomplete="bday" required><span class="form-error">هذا الحقل مطلوب</span></div>
+          <div class="field"><label for="fullname">الاسم الكامل *</label><input type="text" id="fullname" name="fullname" required><span class="form-error">هذا الحقل مطلوب</span></div>
+          <div class="field"><label for="birthdate">تاريخ الميلاد *</label><input type="date" id="birthdate" name="birthdate" required><span class="form-error">هذا الحقل مطلوب</span></div>
         </div>
         <div class="form-row">
-          <div class="field"><label for="email">البريد الإلكتروني *</label><input type="email" id="email" name="email" autocomplete="email" maxlength="254" required><span class="form-error">هذا الحقل مطلوب</span></div>
-          <div class="field"><label for="phone">رقم الهاتف (مع رمز الدولة) *</label><input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="40" placeholder="+212 6XX XXX XXX" required><span class="form-error">هذا الحقل مطلوب</span></div>
+          <div class="field"><label for="email">البريد الإلكتروني *</label><input type="email" id="email" name="email" required><span class="form-error">هذا الحقل مطلوب</span></div>
+          <div class="field"><label for="phone">رقم الهاتف (مع رمز الدولة) *</label><input type="tel" id="phone" name="phone" placeholder="+212 6XX XXX XXX" required><span class="form-error">هذا الحقل مطلوب</span></div>
         </div>
         <div class="form-row">
-          <div class="field"><label for="country-res">بلد الإقامة الحالي *</label><input type="text" id="country-res" name="country_res" autocomplete="country-name" maxlength="100" required><span class="form-error">هذا الحقل مطلوب</span></div>
-          <div class="field"><label for="nationality">الجنسية *</label><input type="text" id="nationality" name="nationality" autocomplete="country" maxlength="100" required><span class="form-error">هذا الحقل مطلوب</span></div>
+          <div class="field"><label for="country-res">بلد الإقامة الحالي *</label><input type="text" id="country-res" name="country_res" required><span class="form-error">هذا الحقل مطلوب</span></div>
+          <div class="field"><label for="nationality">الجنسية *</label><input type="text" id="nationality" name="nationality" required><span class="form-error">هذا الحقل مطلوب</span></div>
         </div>
       </div>
 
@@ -94,14 +94,14 @@
         <div class="form-section-head"><span class="idx">04</span><h3>السيرة الذاتية</h3></div>
         <div class="field full">
           <label for="cv-file">إرفاق ملف السيرة الذاتية (PDF)</label>
-          <label class="file-drop" for="cv-file"><span>اضغط هنا لاختيار ملف، أو اسحبه وأفلته</span><span class="fname"></span><input type="file" id="cv-file" name="cv_file" accept=".pdf,application/pdf" data-max-size="5242880"></label>
+          <label class="file-drop" for="cv-file"><span>اضغط هنا لاختيار ملف، أو اسحبه وأفلته</span><span class="fname"></span><input type="file" id="cv-file" name="cv_file" accept=".pdf,.doc,.docx"></label>
           <span class="hint">إن لم تكن جاهزة بعد، يمكنك التقديم دونها والعودة لإرفاقها لاحقًا.</span>
         </div>
       </div>
 
       <div class="form-section">
         <div class="form-section-head"><span class="idx">05</span><h3>نبذة تعريفية</h3></div>
-        <div class="field full"><label for="message">لماذا تبحث عن عمل في أوروبا؟ وما الذي يميز ملفك؟</label><textarea id="message" name="message" maxlength="4000" placeholder="اكتب بضعة أسطر عن وضعك الحالي وأهدافك..."></textarea></div>
+        <div class="field full"><label for="message">لماذا تبحث عن عمل في أوروبا؟ وما الذي يميز ملفك؟</label><textarea id="message" name="message" placeholder="اكتب بضعة أسطر عن وضعك الحالي وأهدافك..."></textarea></div>
       </div>
 
       <div class="form-section">

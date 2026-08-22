@@ -52,21 +52,21 @@
 </header>
 <section>
   <div class="container form-wrap">
-    <form id="apply-form" class="form-card" novalidate autocomplete="off">
+    <form id="apply-form" class="form-card" novalidate>
 
       <div class="form-section">
         <div class="form-section-head"><span class="idx">01</span><h3>Informations personnelles</h3></div>
         <div class="form-row">
-          <div class="field"><label for="fullname">Nom complet *</label><input type="text" id="fullname" name="fullname" autocomplete="name" maxlength="120" required><span class="form-error">Ce champ est requis</span></div>
-          <div class="field"><label for="birthdate">Date de naissance *</label><input type="date" id="birthdate" name="birthdate" autocomplete="bday" required><span class="form-error">Ce champ est requis</span></div>
+          <div class="field"><label for="fullname">Nom complet *</label><input type="text" id="fullname" name="fullname" required><span class="form-error">Ce champ est requis</span></div>
+          <div class="field"><label for="birthdate">Date de naissance *</label><input type="date" id="birthdate" name="birthdate" required><span class="form-error">Ce champ est requis</span></div>
         </div>
         <div class="form-row">
-          <div class="field"><label for="email">E-mail *</label><input type="email" id="email" name="email" autocomplete="email" maxlength="254" required><span class="form-error">Ce champ est requis</span></div>
-          <div class="field"><label for="phone">Téléphone (avec indicatif du pays) *</label><input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="40" placeholder="+212 6XX XXX XXX" required><span class="form-error">Ce champ est requis</span></div>
+          <div class="field"><label for="email">E-mail *</label><input type="email" id="email" name="email" required><span class="form-error">Ce champ est requis</span></div>
+          <div class="field"><label for="phone">Téléphone (avec indicatif du pays) *</label><input type="tel" id="phone" name="phone" placeholder="+212 6XX XXX XXX" required><span class="form-error">Ce champ est requis</span></div>
         </div>
         <div class="form-row">
-          <div class="field"><label for="country-res">Pays de résidence actuel *</label><input type="text" id="country-res" name="country_res" autocomplete="country-name" maxlength="100" required><span class="form-error">Ce champ est requis</span></div>
-          <div class="field"><label for="nationality">Nationalité *</label><input type="text" id="nationality" name="nationality" autocomplete="country" maxlength="100" required><span class="form-error">Ce champ est requis</span></div>
+          <div class="field"><label for="country-res">Pays de résidence actuel *</label><input type="text" id="country-res" name="country_res" required><span class="form-error">Ce champ est requis</span></div>
+          <div class="field"><label for="nationality">Nationalité *</label><input type="text" id="nationality" name="nationality" required><span class="form-error">Ce champ est requis</span></div>
         </div>
       </div>
 
@@ -94,14 +94,14 @@
         <div class="form-section-head"><span class="idx">04</span><h3>CV</h3></div>
         <div class="field full">
           <label for="cv-file">Joindre votre CV (PDF)</label>
-          <label class="file-drop" for="cv-file"><span>Cliquez ici pour choisir un fichier, ou glissez-déposez-le</span><span class="fname"></span><input type="file" id="cv-file" name="cv_file" accept=".pdf,application/pdf" data-max-size="5242880"></label>
+          <label class="file-drop" for="cv-file"><span>Cliquez ici pour choisir un fichier, ou glissez-déposez-le</span><span class="fname"></span><input type="file" id="cv-file" name="cv_file" accept=".pdf,.doc,.docx"></label>
           <span class="hint">Si vous n'êtes pas encore prêt, vous pouvez postuler sans CV et l'ajouter plus tard.</span>
         </div>
       </div>
 
       <div class="form-section">
         <div class="form-section-head"><span class="idx">05</span><h3>Présentez-vous</h3></div>
-        <div class="field full"><label for="message">Pourquoi cherchez-vous un emploi en Europe ? Qu'est-ce qui distingue votre profil ?</label><textarea id="message" name="message" maxlength="4000" placeholder="Écrivez quelques lignes sur votre situation actuelle et vos objectifs..."></textarea></div>
+        <div class="field full"><label for="message">Pourquoi cherchez-vous un emploi en Europe ? Qu'est-ce qui distingue votre profil ?</label><textarea id="message" name="message" placeholder="Écrivez quelques lignes sur votre situation actuelle et vos objectifs..."></textarea></div>
       </div>
 
       <div class="form-section">
